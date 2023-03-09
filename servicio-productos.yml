@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    password: SpringLibros
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: SpringLibros
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+        format_sql: true
+    show-sql: true
+server:
+  port: 8000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
