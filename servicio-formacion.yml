@@ -1,0 +1,5 @@
+server.port=8090
+#Propiedades de registro eureka
+spring.application.name=servicio-formacion
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+eureka.instance.instance-id=servicio-formacion:${random.int}
